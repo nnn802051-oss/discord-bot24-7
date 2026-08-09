@@ -17,8 +17,8 @@ client.on('ready', () => {
     console.log(`${client.user.tag} พร้อมทำงานแล้ว!`);
     
     // ใส่ ID เซิร์ฟเวอร์และห้องเสียงของคุณเรียบร้อยครับ
-    const channelId = '1496315158463643719'; 
-    const guildId = '1034559411613606009';
+    const channelId = '1529890741390807191'; 
+    const guildId = '1509521288341885059';
 
     const channel = client.channels.cache.get(channelId);
     if (!channel) return console.error("หาห้องเสียงไม่เจอ กรุณาเช็ก ID อีกครั้ง");
