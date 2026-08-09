@@ -3,8 +3,9 @@ const { joinVoiceChannel } = require('@discordjs/voice');
 const express = require('express'); 
 
 const app = express();
+const port = process.env.PORT || 3000;
 app.get('/', (req, res) => res.send('บอท Meow24/7 ออนไลน์แล้ว!'));
-app.listen(process.env.PORT || 8080); // Koyeb มักใช้ พอร์ต 8080
+app.listen(port, () => console.log(`Web server running on port ${port}`));
 
 const client = new Client({
     intents: [
@@ -15,7 +16,7 @@ const client = new Client({
 
 client.on('ready', () => {
     console.log(`${client.user.tag} พร้อมทำงานแล้ว!`);
-
+    
     const channelId = '1529890741390807191'; 
     const guildId = '1509521288341885059';
 
